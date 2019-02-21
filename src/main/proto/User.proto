@@ -1,0 +1,14 @@
+option java_package = "test.model";
+option java_outer_classname = "UserEntity";
+
+message User {
+    required string name =1;
+    required int32 id = 2;
+    optional string email = 3;
+
+    message Phone{
+        required string number = 1;
+    }
+
+    repeated Phone phone = 4;
+}
